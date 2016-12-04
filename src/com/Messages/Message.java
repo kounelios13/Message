@@ -1,4 +1,4 @@
-package messages;
+package com.Messages;
 import java.awt.Component;
 import javax.swing.JOptionPane;
 public class Message{
@@ -38,8 +38,8 @@ public class Message{
 	public static void warning(String msg){
 		warning((Component)null,msg);
 	}
-	public static boolean confirm(){
-		return false;
+	public static boolean confirm(String message){
+		return JOptionPane.showConfirmDialog(null, message) == JOptionPane.OK_OPTION;
 	}
 	
 }
