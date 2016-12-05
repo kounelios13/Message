@@ -1,16 +1,48 @@
 package com.Messages;
 import java.awt.Component;
 import javax.swing.JOptionPane;
+/**
+ * @author Manos Kounelakis
+ *
+ */
 public class Message{
+	/**
+	 * Display an error dialog
+	 * 
+	 * @param panel Where to show the dialog
+	 * @param msg Message to be displayed in the dialog window
+	 * @param title title of the dialog
+	 */
 	public static void error(Component panel,String msg,String title){
 		JOptionPane.showMessageDialog(panel, msg,title,JOptionPane.ERROR_MESSAGE);
 	}
+	/**
+	 * <h2>
+	 * Display an error dialog
+	 * </h2>
+	 * <p>
+	 * Create a dialog with a default title of <em>Error</em>
+	 * </p>
+	 * @param p Where to show the dialog
+	 * @param msg Message to be displayed in the dialog window
+	 */
 	public static void error(Component p,String msg){
 		error(p,msg,"Error");
 	}
+	/**
+	 * Show a dialog which contains a message and a title
+	 * 
+	 * @param msg Message to be displayed
+	 * @param title Title of the dialog
+	 */
 	public static void error(String msg,String title){
 		error(null,msg,title);
 	}
+	/**
+	 * Show a dialog with default title of 'Error' and a message
+	 * 
+	 * @param msg the error message
+	 */
 	public static void error(String msg){
 		error((Component)null,msg);
 	}
