@@ -38,8 +38,14 @@ public class Message{
 	public static void warning(String msg){
 		warning((Component)null,msg);
 	}
-	public static boolean confirm(String message){
-		return JOptionPane.showConfirmDialog(null, message) == JOptionPane.OK_OPTION;
+	public static boolean confirm(Component parentComponent,Object message){
+		return JOptionPane.showConfirmDialog(parentComponent, message) == JOptionPane.OK_OPTION;
 	}
-	
+	public static boolean confirm(Component parentComponent,Object message,String title,int optionType){
+		return JOptionPane.showConfirmDialog(parentComponent, message,title,optionType) == JOptionPane.OK_OPTION;
+	}
+	public static boolean confirm(Component parentComponent,Object message,String title,int optionType,int messageType){
+		return JOptionPane.showConfirmDialog(parentComponent, message,title,optionType,messageType) 
+				== JOptionPane.OK_OPTION;
+	}
 }
