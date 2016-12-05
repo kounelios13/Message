@@ -17,9 +17,9 @@ public class Message{
 		JOptionPane.showMessageDialog(panel, msg,title,JOptionPane.ERROR_MESSAGE);
 	}
 	/**
-	 * <h2>
+	 * 
 	 * Display an error dialog
-	 * </h2>
+	 * 
 	 * <p>
 	 * Create a dialog with a default title of <em>Error</em>
 	 * </p>
@@ -30,7 +30,7 @@ public class Message{
 		error(p,msg,"Error");
 	}
 	/**
-	 * Show a dialog which contains a message and a title
+	 * Show an error dialog which contains a message and a title
 	 * 
 	 * @param msg Message to be displayed
 	 * @param title Title of the dialog
@@ -39,22 +39,48 @@ public class Message{
 		error(null,msg,title);
 	}
 	/**
-	 * Show a dialog with default title of 'Error' and a message
+	 * Show an error dialog with default title of 'Error' and a message
 	 * 
 	 * @param msg the error message
 	 */
 	public static void error(String msg){
 		error((Component)null,msg);
 	}
+	/**
+	 * Show an info dialog
+	 * 
+	 * @param panel Where to display the dialog
+	 * @param msg Message to be displayed
+	 * @param title Title of the dialog window
+	 */
 	public static void info(Component panel,String msg,String title){
 		JOptionPane.showMessageDialog(panel, msg,title,JOptionPane.INFORMATION_MESSAGE);
 	}
+	/**
+	 * Display an info dialog with a message
+	 * 
+	 * Default title is Status
+	 * 
+	 * @param p Where to display the dialog
+	 * @param msg Message to display
+	 */
 	public static void info(Component p,String msg){
 		info(p,msg,"Status");
 	}
+	/**
+	 * Display an info dialog with a text and a title
+	 * 
+	 * @param msg Message to display
+	 * @param title  Title of the dialog
+	 */
 	public static void info(String msg,String title){
 		info(null,msg,title);
 	}
+	/**
+	 * Display an info dialog with a title
+	 * 
+	 * @param msg Message to display
+	 */
 	public static void info(String msg){
 		info((Component)null,msg);
 	}
