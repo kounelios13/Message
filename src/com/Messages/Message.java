@@ -84,6 +84,13 @@ public class Message{
 	public static void info(String msg){
 		info((Component)null,msg);
 	}
+	/**
+	 * Display an error with a message and a title
+	 * 
+	 * @param p Where to display the error
+	 * @param msg Error Message	
+	 * @param title Title to display
+	 */
 	public static void warning(Component p,String msg,String title){
 		JOptionPane.showMessageDialog(p,msg,title,JOptionPane.WARNING_MESSAGE);
 	}
@@ -95,6 +102,10 @@ public class Message{
 	}
 	public static void warning(String msg){
 		warning((Component)null,msg);
+	}
+	public static boolean confirm(Object message){
+		return JOptionPane.showConfirmDialog(null, message) 
+				== JOptionPane.OK_OPTION;
 	}
 	public static boolean confirm(Component parentComponent,Object message){
 		return JOptionPane.showConfirmDialog(parentComponent, message) == JOptionPane.OK_OPTION;
