@@ -6,6 +6,10 @@ import javax.swing.JOptionPane;
  *
  */
 public class Message{
+	public static final int DEFAULT_OPTION       = JOptionPane.DEFAULT_OPTION;
+	public static final int OK_CANCEL_OPTION     = JOptionPane.OK_CANCEL_OPTION;
+	public static final int YES_NO_CANCEL_OPTION = JOptionPane.YES_NO_CANCEL_OPTION;
+	public static final int YES_NO_OPTION 		 = JOptionPane.YES_NO_OPTION;
 	/**
 	 * Display an error dialog
 	 * 
@@ -105,8 +109,8 @@ public class Message{
 	}
 	/**
 	 * Display a warning with a message and a title.
-	 * @param msg
-	 * @param title
+	 * @param msg Warning message
+	 * @param title Warning title
 	 */
 	public static void warning(String msg,String title){
 		warning(null,msg,title);
@@ -118,13 +122,34 @@ public class Message{
 	public static void warning(String msg){
 		warning((Component)null,msg);
 	}
+	/**
+	 * Display a confirmation dialog
+	 * @param message Message to display
+	 * @return Confirmation value(If the user pressed OK)
+	 */
 	public static boolean confirm(Object message){
 		return JOptionPane.showConfirmDialog(null, message) 
 				== JOptionPane.OK_OPTION;
 	}
+	/**
+	 * Display a confirmation dialog
+	 * @param parentComponent Where to show the confirmation dialog
+	 * @param message Message  to display
+	 * @return Confirmation value(If the user pressed OK)
+	 */
 	public static boolean confirm(Component parentComponent,Object message){
 		return JOptionPane.showConfirmDialog(parentComponent, message) == JOptionPane.OK_OPTION;
 	}
+	/**
+	 * Display a confirmation dialog
+	 * @param parentComponent Where to display the dialog
+	 * @param message Message to display
+	 * @param title Title of the dialog
+	 * @param optionType Choose the buttons to be displayed in the dialog(DEFAULT_OPTION,OK_CANCEL_OPTION,YES_NO_CANCEL_OPTION,YES_NO_OPTION)
+	 * @see javax.swing.JOptionPane#showConfirmDialog(Component, Object, String, int)
+	 * 
+	 * @return Confirmation value(If the user pressed OK)
+	 */
 	public static boolean confirm(Component parentComponent,Object message,String title,int optionType){
 		return JOptionPane.showConfirmDialog(parentComponent, message,title,optionType) == JOptionPane.OK_OPTION;
 	}
