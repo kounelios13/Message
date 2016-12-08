@@ -1,15 +1,20 @@
-package com.Messages;
+package com.messages;
 import java.awt.Component;
 import javax.swing.JOptionPane;
 /**
+ * 
  * @author Manos Kounelakis
  *
+ * <h2>Message</h2>
+ * <p>Message is a class that provides <strong>static</strong> methods
+ *  that help you inform the user about an event that happened and ask a user to confirm an action
+ *  .</p>
  */
 public class Message{
-	public static final int DEFAULT_OPTION       = JOptionPane.DEFAULT_OPTION;
+	/*public static final int DEFAULT_OPTION       = JOptionPane.DEFAULT_OPTION;
 	public static final int OK_CANCEL_OPTION     = JOptionPane.OK_CANCEL_OPTION;
 	public static final int YES_NO_CANCEL_OPTION = JOptionPane.YES_NO_CANCEL_OPTION;
-	public static final int YES_NO_OPTION 		 = JOptionPane.YES_NO_OPTION;
+	public static final int YES_NO_OPTION 		 = JOptionPane.YES_NO_OPTION;*/
 	/**
 	 * Display an error dialog
 	 * 
@@ -148,6 +153,7 @@ public class Message{
 	 * @param optionType Choose the buttons to be displayed in the dialog(DEFAULT_OPTION,OK_CANCEL_OPTION,YES_NO_CANCEL_OPTION,YES_NO_OPTION)
 	 * @see javax.swing.JOptionPane#showConfirmDialog(Component, Object, String, int)
 	 * 
+	 * optionType values refer to the JOptionPane constant fields
 	 * @return Confirmation value(If the user pressed OK)
 	 */
 	public static boolean confirm(Component parentComponent,Object message,String title,int optionType){
@@ -168,7 +174,7 @@ public class Message{
 	 *  <li>PLAIN_MESSAGE</li>
 	 * </ul>
 	 * <br>
-	 * The above values refer to the JOptionPane constant fields
+	 * The above values(optionType,messageType) refer to the JOptionPane constant fields
 	 * @return Confirmation value(If the user pressed OK)
 	 */
 	public static boolean confirm(Component parentComponent,Object message,String title,int optionType,int messageType){
