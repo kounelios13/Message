@@ -7,5 +7,6 @@ Let's say you want to display a warning dialog to the user.
 You just type ```Message.warning('your message here')```.
 Want the user to confirm something:<br>
 ```boolean answer = Message.confirm('message here')```.
-For a complete list of methods read the  <a href="docs/index.html">javadoc</a>
+
+For a complete list of methods read the  javadoc
 
