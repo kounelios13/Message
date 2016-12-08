@@ -133,7 +133,7 @@ public class Message{
 	}
 	/**
 	 * Display a confirmation dialog
-	 * @param parentComponent Where to show the confirmation dialog
+	 * @param parentComponent Where to display the confirmation dialog
 	 * @param message Message  to display
 	 * @return Confirmation value(If the user pressed OK)
 	 */
@@ -153,6 +153,24 @@ public class Message{
 	public static boolean confirm(Component parentComponent,Object message,String title,int optionType){
 		return JOptionPane.showConfirmDialog(parentComponent, message,title,optionType) == JOptionPane.OK_OPTION;
 	}
+	/**
+	 * Display a confirmation dialog
+	 * @param parentComponent Where to display the confirmation dialog 
+	 * @param message Message to display
+	 * @param title Title of the dialog
+	 * @param optionType Choose the buttons to be displayed in the dialog(DEFAULT_OPTION,OK_CANCEL_OPTION,YES_NO_CANCEL_OPTION,YES_NO_OPTION)
+	 * @param messageType Defines the style of the message. The Look and Feel manager may lay out the dialog differently depending on this value, and will often provide a default icon. The possible values are:
+	 * <ul>
+	 * 	<li>ERROR_MESSAGE</li>
+	 *  <li>INFORMATION_MESSAGE</li>
+	 *  <li>WARNING_MESSAGE</li>
+	 *  <li>QUESTION_MESSAGE</li>
+	 *  <li>PLAIN_MESSAGE</li>
+	 * </ul>
+	 * <br>
+	 * The above values refer to the JOptionPane constant fields
+	 * @return Confirmation value(If the user pressed OK)
+	 */
 	public static boolean confirm(Component parentComponent,Object message,String title,int optionType,int messageType){
 		return JOptionPane.showConfirmDialog(parentComponent, message,title,optionType,messageType) 
 				== JOptionPane.OK_OPTION;
