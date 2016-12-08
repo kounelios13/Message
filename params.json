@@ -1,0 +1,6 @@
+{
+  "name": "Message",
+  "tagline": "Display warnings error an info messages to a user without typing JOPtionPane.showMessageDialog",
+  "body": "# Message\r\n<h2>Tired of writing JOptionPane.showMessageDialog() or JOptionPane.showConfirmDialog()?</h2>\r\n<p>Message is a class of <em>static</em> methods that help you you deal with that.\r\n\r\nLet's say you want to display a warning dialog to the user.\r\n\r\nYou just type ```Message.warning('your message here')```.\r\nWant the user to confirm something:<br>\r\n```boolean answer = Message.confirm('message here')```.\r\n\r\nFor a complete list of methods read the  javadoc\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
