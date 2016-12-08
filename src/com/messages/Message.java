@@ -11,10 +11,6 @@ import javax.swing.JOptionPane;
  *  .</p>
  */
 public class Message{
-	/*public static final int DEFAULT_OPTION       = JOptionPane.DEFAULT_OPTION;
-	public static final int OK_CANCEL_OPTION     = JOptionPane.OK_CANCEL_OPTION;
-	public static final int YES_NO_CANCEL_OPTION = JOptionPane.YES_NO_CANCEL_OPTION;
-	public static final int YES_NO_OPTION 		 = JOptionPane.YES_NO_OPTION;*/
 	/**
 	 * Display an error dialog
 	 * 
