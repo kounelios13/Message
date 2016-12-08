@@ -85,21 +85,36 @@ public class Message{
 		info((Component)null,msg);
 	}
 	/**
-	 * Display an error with a message and a title
+	 * Display a warning with a message and a title
 	 * 
-	 * @param p Where to display the error
-	 * @param msg Error Message	
+	 * @param p Where to display the warning
+	 * @param msg Warning message
 	 * @param title Title to display
 	 */
 	public static void warning(Component p,String msg,String title){
 		JOptionPane.showMessageDialog(p,msg,title,JOptionPane.WARNING_MESSAGE);
 	}
+	/**
+	 * Display a warning with a message.Title defaults to Warning
+	 * 
+	 * @param p Where to display the warning
+	 * @param msg Warning message
+	 */
 	public static void warning(Component p,String msg){
 		warning(p,msg,"Warning");
-	}	
+	}
+	/**
+	 * Display a warning with a message and a title.
+	 * @param msg
+	 * @param title
+	 */
 	public static void warning(String msg,String title){
 		warning(null,msg,title);
 	}
+	/**
+	 * Display a warning with a message
+	 * @param msg Warning message
+	 */
 	public static void warning(String msg){
 		warning((Component)null,msg);
 	}
